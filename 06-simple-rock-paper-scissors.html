@@ -1,33 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock Paper Scissor</title>
 </head>
+
 <body>
-    
+
     <button onclick="
-        
+        let computerMove = ``;
         let randomNumber = Math.random(); 
-        if(randomNumber <= 1/3 && randomNumber>=0 ){
+        if(randomNumber < 1/3 && randomNumber>=0 ){
             computerMove = `Rock`;
         }
-        else if(randomNumber <= 2/3 && randomNumber>=1/3 ){
+        else if(randomNumber < 2/3 && randomNumber>=1/3 ){
             computerMove = `Paper`;
         }
-        if(randomNumber <= 1 && randomNumber>= 2/3 ){
+        else if(randomNumber < 1 && randomNumber>= 2/3 ){
             computerMove =`Scissor`;
         }
 
-        let result =``;
+        let result =``;               
+//comparing the moves of computer and your move for result.
+
+    if(computerMove === `Rock`){
+        result = `Tie.`;
+    }else if(computerMove === `Scissor`){
+        result = `You Wins.`;
+    }else if(computerMove === `Paper`){
+        result = `computer Wins.`;
+    }
+
+    console.log(result);
 
         ">Rock</button>
     <button>Paper</button>
     <button>Scissor</button>
 
     <script>
-        let computerMove = ``;
+      
     </script>
 </body>
+
 </html>
