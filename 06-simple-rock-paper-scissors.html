@@ -10,13 +10,13 @@
     <button onclick="
         let computerMove = ``;
         let randomNumber = Math.random(); 
-        if(randomNumber < 1/3 && randomNumber>=0 ){
+        if(randomNumber < 1/3 && randomNumber > 0 ){
             computerMove = `Rock`;
         }
-        else if(randomNumber < 2/3 && randomNumber>=1/3 ){
+        else if(randomNumber < 2/3 && randomNumber > 1/3 ){
             computerMove = `Paper`;
         }
-        else if(randomNumber < 1 && randomNumber>= 2/3 ){
+        else if(randomNumber < 1 && randomNumber > 2/3 ){
             computerMove =`Scissor`;
         }
 
@@ -35,8 +35,37 @@
 
 
         ">Rock</button>
-    <button>Paper</button>
-    <button>Scissor</button>
+
+
+    <button onclick="
+     computerMove = ``;
+         randomNumber = Math.random(); 
+        if(randomNumber < 1/3 && randomNumber > 0 ){
+            computerMove = `Rock`;
+        }
+        else if(randomNumber < 2/3 && randomNumber > 1/3 ){
+            computerMove = `Paper`;
+        }
+        else if(randomNumber < 1 && randomNumber > 2/3 ){
+            computerMove =`Scissor`;
+        }
+
+         result =``;  
+
+    if(computerMove === `Paper`){
+        result = `Tie.`;
+    }else if(computerMove === `Rock`){
+        result = `You Wins.`;
+    }else if(computerMove === `Scissor`){
+        result = `You loose.`;
+    }
+
+    alert(`You picked Paper. Computer picked ${computerMove}. ${result}`);
+
+    ">Paper</button>
+
+
+    <button >Scissor</button>
 
     <script>
 
