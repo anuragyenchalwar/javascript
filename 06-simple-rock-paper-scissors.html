@@ -65,7 +65,32 @@
     ">Paper</button>
 
 
-    <button >Scissor</button>
+    <button onclick="
+    computerMove = ``;
+    randomNumber = Math.random(); 
+   if(randomNumber < 1/3 && randomNumber > 0 ){
+       computerMove = `Rock`;
+   }
+   else if(randomNumber < 2/3 && randomNumber > 1/3 ){
+       computerMove = `Paper`;
+   }
+   else if(randomNumber < 1 && randomNumber > 2/3 ){
+       computerMove =`Scissor`;
+   }
+
+    result =``;  
+
+if(computerMove === `Paper`){
+   result = `You Wins.`;
+}else if(computerMove === `Rock`){
+   result = `You loose.`;
+}else if(computerMove === `Scissor`){
+   result = `You Tie.`;
+}
+
+alert(`You picked Scissor. Computer picked ${computerMove}. ${result}`);
+
+">Scissor</button>
 
     <script>
 
