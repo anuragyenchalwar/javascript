@@ -8,27 +8,27 @@
 <body>
 
     <button onclick="
+        guess = `Head`;
         if(randomNumber < 1/2){
             result = `Head`;
-            alert(`You choose Head. And it is: ${result}`)
         }else{
-            result = `Tail`
-            alert(`You choose Head. And it is: ${result}`)
-        } ">Head</button>
+            result = `Tail`;
+        } 
+        alert(result === guess ? alert(`You choose Head. And it is: ${result}. You Win!`) : `It is ${result}. You Loose`);
+    ">Head</button>
 
     <button onclick="
-    if(randomNumber > 1/2){
-        result = `Tail`;
-        alert(`You choose Tail. And it is: ${result}`)
-    }else{
-        result = `Head`
-        alert(`You choose Tail. And it is: ${result}`)
-    } 
-    
+        guess = `Tail`;
+        if(randomNumber > 1/2){
+            result = `Tail`;
+        }else{
+            result = `Head`
+            } 
+        alert(result === guess ? alert(`You choose Tail. And it is: ${result}. You Win!`) : `It is ${result}. You Loose`);
     ">Tail</button>
 
     <script>
-        let randomNumber = math.random();
+        let randomNumber = Math.random();
         let result = ``;
 
     </script>
