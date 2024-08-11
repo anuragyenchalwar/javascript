@@ -9,9 +9,9 @@
     <script>
         /*const name = `Anurag`;
         console.log(name);*/
-        const coffee = `5`;
-        const bagels = `3`;
-        const soup = `9`;
+        const coffee = 5;
+        const bagels = 3;
+        const soup = 9;
 
         let order = ``;
         let tax = ``;
@@ -24,9 +24,9 @@
 
         tax = (`${order / 10} `);
         console.log(`payable tax is(10%): ${tax}`);
-
-        total = ( `${order}` + `${tax}`);
-        console.log(`Your Total Order amount is:` , eval(`${total}`));   //error calculation
+        
+        total = eval( `${order}` + `${tax}`);
+        console.log(`Your Total Order amount is:` , `${total}`);   //error calculation
     </script>
 </body>
 </html>
