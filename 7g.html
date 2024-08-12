@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>length convertor</title>
+</head>
+<body>
+    <script>
+        function toCovertMiles(km){
+        return toCovertMiles = km / 1.6;
+    }
+    function toCovertKm(miles){
+        return toCovertKm = miles * 1.6;
+    }
+
+    function lenghtConvertFrom(length , from , to){
+        if(from === `km` ){
+           const result = toCovertMiles(length);
+            return `${result} ${to}`;
+        }
+
+        else if( from === `miles`){
+            const result = toCovertKm (length);
+            return `${result} ${to}`;
+        }
+    }
+
+    console.log ( lenghtConvertFrom (2 , `miles` , `km`));
+    </script>
+</body>
+</html>
