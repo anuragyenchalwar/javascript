@@ -16,8 +16,8 @@
 
         function convertTemperature( degree , unit){
             if(unit === `C`){
-                const result = convertToFarhenite(degree);
-                return `${result} F`
+                const result = convertToFarhenite(degree);  //saves the converted degrees in result
+                return `${result} F` //returns the result and unit.
             }else if(unit === `F`){
                 const result = convertToCelcius(degree)
                 return `${result} C`
