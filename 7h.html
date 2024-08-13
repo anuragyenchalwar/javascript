@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>lenghtConvertor</title>
+</head>
+<body>
+    <script>
+        function givenKm( length , from , to){
+            if (from === `km` && to === `miles`){               
+                return `${length / 1.6} ${to}`;
+            } else if( from === `km` && to === `feet`){
+                return `${length * 3281} ${to}`;
+            }
+
+            else if(from === `miles` && to === `km` ){
+                return `${length * 1.6} ${to}`;
+            } else if( from === `miles` && to === `feet`){
+                return `${length * 5280} ${to}`;
+            }
+
+            else if(from === `feet` && to === `miles`){
+                return `${length / 3281} ${to}`;
+            } else if(from === `feet` && to === `km`){
+                return `${length / 5280} ${to}`;
+            }
+
+            else if ( from === to){
+                return `${length} ${to}`;
+            }
+
+        }
+        console.log('2 kilometer is:')
+        console.log (givenKm( 2 , `km` , `feet`));
+        console.log (givenKm( 2 , `km` , `miles`));
+        console.log('2 miles is:')
+        console.log (givenKm( 2 , `miles` , `km`));
+        console.log (givenKm( 2 , `miles` , `feet`));
+        console.log('2 feet is:')
+        console.log (givenKm( 2 , `feet` , `miles`));
+        console.log (givenKm( 2 , `feet` , `km`));
+        console.log('2 km is:')
+        console.log (givenKm( 2 , `km` , `km`));
+       
+    </script>
+    
+</body>
+</html>
