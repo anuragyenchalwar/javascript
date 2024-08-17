@@ -24,6 +24,14 @@
             playgame('Scissor');
         ">Scissor</button>
 
+        <button onclick=" score.loose = 0 ;
+        score.wins = 0;
+        score.ties = 0;
+    //resets the property-values to 0; 
+        alert(`The score is Reset`); 
+        ">Reset score
+        </button>
+        
     <script>
         let result =``;
 
@@ -88,7 +96,7 @@
         }
 
     // creating an object     
-        let score = { 
+        const score = { 
                 wins : 0,
                 loose : 0,
                 ties : 0
