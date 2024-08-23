@@ -5,7 +5,8 @@
     <script>
      const product = {
         name: 'basketball',
-        price: 2095
+        price: 2095,
+        textsize : `testing` 
       };
       console.log(product);
     /*
@@ -17,8 +18,15 @@
 
       delete product.players; //deleting the property in the object
       console.log(product); 
+   
+     console.log([`product.name`])
     */
-   console.log([`product.name`])
+  //  console.log(product[`textsize`] + [`name`]);
+
+  console.log( JSON.stringify(product));
+  const jsonstring =  JSON.stringify(product);
+
+  console.log (JSON.parse(jsonstring));
     </script>
   </body>
 </html>

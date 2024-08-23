@@ -73,9 +73,13 @@
                 score.ties += 1;
             }
 
+            localStorage.setItem (`message` , `hello`)
+
+
+
     //showing the results in pop-up
         alert(`You picked ${playerMove} . Computer picked ${computerMove}. ${result}.            
-             Wins : ${score.wins}. Looses : ${score.loose}. Ties : ${score.ties} `);  
+Wins : ${score.wins}. Looses : ${score.loose}. Ties : ${score.ties} `);  
         } 
         //template string is multiline string
        
@@ -101,13 +105,14 @@
                 loose : 0,
                 ties : 0
             }; 
+            console.log( localStorage.getItem (`message`) );
 
      
     /*
         algorihm for the rock paper scissor game:
-        1.computer randomy choose the moves
-        2.compare the moves of computer with yours 
-        3.update the score
+        1.computer randomly chooses the move
+        2.compare the move of computer with yours 
+        3.update the score    ||object||
         4.result
     */
 
