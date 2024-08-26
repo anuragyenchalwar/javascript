@@ -6,9 +6,25 @@
      const product = {
         name: 'basketball',
         price: 2095,
-        textsize : `testing` 
+        'text-size' : 'testing' ,
+
+        rating : {
+          star : 4.5,
+          count : 87
+        },
+
+        fun : function function1(){
+          console.log('this is function iside object called as Method');
+        }
+
       };
-      console.log(product);
+      console.log(product.name); //dot notation
+      console.log(product['text-size']); //bracket notation
+      console.log(product.rating.star); //nested object
+      product.fun(); //function inside object "Method"
+
+
+
     /*
       product.players = 5;  //adding the new property in an object
       console.log(product) 
@@ -23,10 +39,13 @@
     */
   //  console.log(product[`textsize`] + [`name`]);
 
+  /*
   console.log( JSON.stringify(product));
   const jsonstring =  JSON.stringify(product);
-
   console.log (JSON.parse(jsonstring));
+  */
+
+
     </script>
   </body>
 </html>
