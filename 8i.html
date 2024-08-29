@@ -4,15 +4,18 @@
   <body>
     <button onclick=" guess = 'heads'
    playgame('heads');"
-    >rock</button>
+    >Head</button>
     <button onclick=" guess = 'tails'
-    playgame('tails');">paper</button>
+    playgame('tails');">Tails</button>
 
     <script>
-        
+ 
+        const score = JSON.parse(localStorage.getItem('score'));
+
         function playgame(guess){ 
             const randomNumber = Math.random();
-            const result = randomNumber < 0.5 ? 'heads' : 'tails';           
+            const result = randomNumber < 0.5 ? 'heads' : 'tails'; 
+                    
             if(guess === result ){
                 console.log('You win!')
                 score.Wins += 1;
@@ -21,14 +24,33 @@
                 console.log('You Loose!')
                 score.Looses += 1;
             }
-            console.log(score);
-        };
-        const score = {
-            Wins : 0,
-            Looses : 0,
-        }
 
+            localStorage.setItem('score',JSON.stringify( score ));
+
+            console.log(score);
+            
+            // //3:storing the string into local storage
+            // localStorage.setItem('score',scoreString);
+            // console.log(score);
+        };
+        // //1:create object
+        // const score = {
+        //     Wins: 0,
+        //     Looses:0
+
+        // };
+
+        // //2:converting the object into string 
+        // const scoreString = JSON.stringify(score);
      
+        //  //4:retrinving the data from saved localstarage
+        //  const retrivescorestring = localStorage.getItem('score');
+
+        //  //converting the retrived string to object again
+        //  const retrivedscore = JSON.parse(retrivescorestring);
+
+        //  //log this score
+        //  console.log(retrivedscore);
     </script>
   </body>
 </html>
