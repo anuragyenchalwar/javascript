@@ -4,12 +4,22 @@
     <title>DOM</title>
   </head>
   <body>
-    <button onclick="">hello</button>
+    <button class="js-button">hello</button>
+    <button class="js-secondElment">second</button>
 
     <script>
+      // '.' class selctor
+      console.log(document.querySelector('.js-button').innerHTML = 'changed');
+      const buttonElement = document.querySelector('.js-secondElment');
+      console.log(buttonElement);
+      /*
+      console.log(document.querySelector('button').innerHTML);
+      document.querySelector('button').innerHTML = 'cahnged';
+      */
+      /*
       console.log(document.body.innerHTML)
-      
       document.title = 'Good job!';
+      */
     </script>
   </body>
 </html>

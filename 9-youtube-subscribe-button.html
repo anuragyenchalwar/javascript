@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <title>DOM projects</title>
+    <style>
+        .js-YT-button {
+            border-radius: 12px;
+            background-color: red;
+            color: white;
+            border: 5px;
+        }
+    </style>
+</head>
+<body>
+    <button class = "js-YT-button" onclick="
+        subscribe();
+        ">Subscribe</button>
+
+    <script>
+        function subscribe(){
+        const test = document.querySelector('.js-YT-button');
+        if(test.innerText === 'Subscrib'){
+            document.querySelector('.js-YT-button').innerText = 'Subscribed'
+        } else{
+            document.querySelector('.js-YT-button').innerText = 'Subscrib'
+        }
+    };
+    </script>
+</body>
+</html>
