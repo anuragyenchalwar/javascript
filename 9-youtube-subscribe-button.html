@@ -15,12 +15,19 @@
         subscribe();
         ">Subscribe</button>
         <p>Amazon shipping calculator</p>
-        <input placeholder="Cost of order" class="js-order-calc">
+        <input placeholder="Cost of order" class="js-order-calc" onkeydown="
+          onkeyholder(event); ">
         <button onclick="
         calculator();
         ">Calculate</button>
         <p class="js-total-cost"></p>
     <script>
+        function onkeyholder(event){
+              
+            if(event.key === 'Enter'){
+                calculator();
+            }
+        }
         function calculator(){
             const inputElement = document.querySelector('.js-order-calc');
             let orderTOtal = Number(inputElement.value);

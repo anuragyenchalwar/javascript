@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>9b</title>
+</head>
+<body>
+    <button class="js-head" onclick="
+        playgame('head');">head</button>
+    <button class="js-tail" onclick="playgame('tail');" >tail</button>
+    <p class="display-result"></p>
+
+    <script>
+
+        function playgame(play){
+            if(play === 'head'){
+                document.querySelector('.display-result')
+                .innerHTML ='You Chose head';
+            }else{
+                document.querySelector('.display-result').innerHTML =`
+                    You Chose tail`
+            }
+        }
+    </script>
+</body>
+</html>
